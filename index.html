@@ -9,34 +9,35 @@
 </head>
 <body style="margin: 0; padding: 0; background-color: transparent;">
 
-<div style="max-width:900px; margin:auto; text-align:center; font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #f6f8fb 0%, #e5ebf4 100%); padding: 30px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
+<!-- Vibrant colorful gradient background: Blue -> Purple -> Red -->
+<div style="max-width:900px; margin:auto; text-align:center; font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #0052D4 0%, #65379B 50%, #e53e3e 100%); padding: 20px 20px 10px 20px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.2);">
   
-  <label for="flipSlider" style="display:block; margin-bottom:12px; font-weight:700; font-size:1.6em; color: #1a202c;">
-    Amount: $<span id="amountDisplay" style="color: #e53e3e;">0</span>
+  <label for="flipSlider" style="display:block; margin-bottom:12px; font-weight:700; font-size:1.6em; color: #ffffff; text-shadow: 1px 1px 3px rgba(0,0,0,0.3);">
+    Amount: $<span id="amountDisplay" style="color: #ffe600;">0</span>
   </label>
   
-  <input type="range" id="flipSlider" min="0" max="260" step="10" value="0" style="width:100%; margin-bottom:30px; cursor: pointer;">
+  <input type="range" id="flipSlider" min="0" max="260" step="10" value="0" style="width:100%; margin-bottom:15px; cursor: pointer;">
 
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 589" style="filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1));">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 589" style="filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.25)); display: block; margin: auto;">
     <defs>
       <style>
         .st0 {
           fill: #f9f9f9;
           fill-rule: evenodd;
-          stroke: #c4c4c4; /* Lightened the stroke slightly for a cleaner look */
+          stroke: #c4c4c4;
           stroke-linejoin: round;
           stroke-width: .97px;
         }
         .st1 {
-          fill: #00b0f0; /* blue */
+          fill: #00b0f0; /* Original Blue */
           isolation: isolate;
-          transition: fill 0.3s ease; /* Added a smooth transition for flipping colors */
+          transition: fill 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Bouncy smooth transition */
         }
       </style>
     </defs>
     <!-- START MAP CONTENT -->
     <g id="Map">
-      <!-- (Keeping the SVG paths exactly as you provided them to render the map) -->
+      <!-- (Keeping the SVG paths exactly as you provided them) -->
       <path id="MA" class="st0" d="M956.31,153.05l-.29-.19v.29l.29-.1h0ZM953.4,150.43l.68-.29v-.39l-.68.68h0ZM965.44,142.86l-.1-1.36-.19-.78.29,2.14ZM923.02,132.86l-.68.29-5.53,1.65-1.94.68-2.23.68-.78.29v.29l.29,5.05.29,4.66.29,4.27.49.29,1.75-.49,7.86-2.33.19.49,13.98-5.34.1.19,1.26-.49,4.46-1.75,4.27,5.14h0l.58-.49.29-1.46-.1,2.33h.97l.29,1.16.87,1.65h0l4.56-5.53,3.79,1.26.87-1.94,6.21-3.3-2.62-5.14.68,3.3-3.2,2.43-3.59.29-7.18-7.67-3.2-4.85,3.2-3.4-3.3-.19-1.36-3.2-.1-.19-5.53,6.02-12.23,4.08-3.98,1.26h0Z"/>
       <path id="MN" class="st0" d="M558.55,73.85l1.94,6.89,4.08,24.85,1.94,9.9.58,8.74,2.23,5.24.49,4.46.39,1.46-.1.29-3.88,6.41,2.52,4.27,4.85,34.17.19,4.46,4.85-.29,19.12-1.07,47.76-3.98,4.76-.49v-.49l-1.36-7.47-5.92-3.01-4.66-4.85-7.38-4.46-2.33-.19-3.59-2.72.97-13.39-3.4-3.11,1.16-5.44,6.21-5.63-1.07-11.65,2.23-2.52h0l7.57-7.96,8.64-11.07,3.3-2.33,5.82-2.81,6.11-4.56-4.08.78-2.43-1.84-9.32,1.26-1.46-1.75-8.35,3.4-6.7-2.81-1.84-2.23-5.34.39-3.59-1.84,1.16-1.36-4.56-1.46h-4.08l-6.5,2.81-1.26-1.94-10.29-1.46-3.49-8.74-.39-2.62-4.46-1.26.39,7.47-11.84.87-14.66.58-.97.1h0Z"/>
       <path id="MT" class="st0" d="M465.66,72.97l-32.13-2.14-23.39-2.23-23.3-2.72-14.46-1.94-23.1-3.59-11.55-1.94-25.82-4.95-2.72-.58-4.17,19.8,1.84,3.59,1.46,5.53-.87.78,1.84,5.05,2.52,2.14,7.18,12.04.68,2.04,2.91-.19-3.4,15.92-1.36.39-1.84,5.34,9.61.68.78,4.46,5.44,13.3.97.78,3.79,7.77.97-.78,8.06-.1,10.19,1.07,2.52-3.3,3.01,5.44.58.29.1-.58,1.36-9.51,33.2,4.08,26.5,2.52,13.98,1.16,24.95,1.46,1.26.1h.29l.1-1.36.29-6.7.39-8.83.1-2.23.19-3.88,1.55-30.48,1.26-23.68.1-3.88-1.84-.1h0Z"/>
@@ -134,12 +135,13 @@
 
     districts.forEach((district, index) => {
       if (index < districtsToFlip) {
-        district.style.fill = '#e53e3e'; // Modern red color
+        district.style.fill = '#e53e3e'; /* Modern vibrant Red */
       } else {
-        district.style.fill = '#00b0f0'; // Keeps original blue
+        district.style.fill = '#00b0f0'; /* Original Blue */
       }
     });
   });
 </script>
 
 </body>
+</html>
