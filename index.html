@@ -3,7 +3,7 @@
     Amount: $<span id="amountDisplay">0</span>
   </label>
 
-  <input type="range" id="flipSlider" min="0" max="24000" step="100" value="0" style="width:100%;margin-bottom:20px;">
+  <input type="range" id="flipSlider" min="0" max="24000" step="1000" value="0" style="width:100%;margin-bottom:20px;">
 
   <?xml version="1.0" encoding="UTF-8"?>
 <svg id="_ÎÓÈ_1" data-name="—ÎÓÈ_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 814.5 519.23">
@@ -167,20 +167,19 @@
     <line class="cls-3" x1="75.36" y1="69.22" x2="75.36" y2="53.72"/>
   </g>
 </svg>
-  
+
 </div>
 
 <script>
   const slider = document.getElementById('flipSlider');
   const amountDisplay = document.getElementById('amountDisplay');
   const districts = Array.from(document.querySelectorAll('.cls-4'));
-  const chipInBtn = document.getElementById('chipIn');
 
   slider.addEventListener('input', () => {
-    const amount = parseInt(slider.value, 100);
+    const amount = parseInt(slider.value, 10);
     amountDisplay.textContent = amount;
 
-    const districtsToFlip = amount / 100;
+    const districtsToFlip = amount / 1000;
 
     districts.forEach((district, index) => {
       if (index < districtsToFlip) {
@@ -189,6 +188,5 @@
         district.style.fill = '#2fc4f2';
       }
     });
-
-  
+  });
 </script>
