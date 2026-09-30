@@ -3,7 +3,7 @@
     Amount: $<span id="amountDisplay">0</span>
   </label>
 
-  <input type="range" id="flipSlider" min="0" max="260" step="10" value="0" style="width:100%;margin-bottom:20px;">
+  <input type="range" id="flipSlider" min="0" max="24000" step="100" value="0" style="width:100%;margin-bottom:20px;">
 
   <?xml version="1.0" encoding="UTF-8"?>
 <svg id="_ÎÓÈ_1" data-name="—ÎÓÈ_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 814.5 519.23">
@@ -167,9 +167,7 @@
     <line class="cls-3" x1="75.36" y1="69.22" x2="75.36" y2="53.72"/>
   </g>
 </svg>
-
-  <br>
-  <button id="chipIn">CHIP IN $0</button>
+  
 </div>
 
 <script>
@@ -179,10 +177,10 @@
   const chipInBtn = document.getElementById('chipIn');
 
   slider.addEventListener('input', () => {
-    const amount = parseInt(slider.value, 10);
+    const amount = parseInt(slider.value, 100);
     amountDisplay.textContent = amount;
 
-    const districtsToFlip = amount / 10;
+    const districtsToFlip = amount / 100;
 
     districts.forEach((district, index) => {
       if (index < districtsToFlip) {
@@ -192,10 +190,5 @@
       }
     });
 
-    chipInBtn.textContent = `CHIP IN $${amount}`;
-  });
-
-  chipInBtn.addEventListener('click', () => {
-    window.open('https://secure.winred.com/ors/26x-impact/?recurring=true', '_blank');
-  });
+  
 </script>
